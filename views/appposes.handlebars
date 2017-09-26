@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<title>hapiflo</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/hapifloapp.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-104058815-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<body>
+	<header>
+	<div class= "curmenu">
+		<h1 id="hPoses">POSES</h1>
+      	<div class= a>
+      		<div class= b></div>
+      		<div class= b></div>
+      		<div class= b></div>
+      		<ul class= "myMenu">
+      			<li><a href='/appindex' style= "color: black;">FLOW</a></li>
+      			<li><a href='/appposes' style= "color: black;">POSES</a></li>
+      			<li><a href= '/apphelp' style= "color: black;">HELP</a></li>
+      		</ul>
+      	</div>
+	</div>
+	</header>
+    
+	{{#each appposes}}
+	<div class = "wordPoses">
+		<h6><center>{{name}}</center></h6>
+		<h2 style= "color: #46D9E3;"><center>{{sanskrit}}</center></h2>
+	</div>
+	<div class = "mediaPoses">
+        <center><img width= "200" height= "200" src= "{{imgURL}}"></center>
+		<center><iframe width="300" height="315" src="{{videoURL}}"></iframe></center>
+    </div>
+    
+	{{/each}}
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+	<script src="js/appposes.js"></script>
+</body>
+
+</html>
