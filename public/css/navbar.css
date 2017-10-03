@@ -1,0 +1,149 @@
+
+
+.navigationbar-flex {
+    position:fixed;
+    z-index: 1000;
+    top: .75em;
+    left: .75em;
+    outline-style: solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem 15px 0.75rem 15px;
+    /*        top right bottom left*/
+/*    position:fixed;*/
+/*    flexboxes cannot have a fixed position*/
+}
+
+.flexleft {
+    justify-content: flex-start;
+}
+
+.flexright {
+    justify-content: flex-end;
+}
+
+.flexspacearound {
+    justify-content: space-around;
+}
+
+.navigationbar > li {
+    /*    position: relative;*/
+    display: block;
+}
+
+.navigationbar > li > a {
+    /*    position: relative;*/
+    /*    display: block;*/
+    padding: .55rem .55rem .55rem .55rem;
+}
+
+.navigationbar-item {
+    flex-shrink: 0;
+    margin: 0 .55rem;
+}
+
+.search-form {
+    padding: 0 1rem 0 1rem;
+    flex-grow: 1;
+    min-width: 2rem;
+}
+
+.search-box {
+    /*    min-width: 2rem;*/
+    width: 100%;
+    padding: .4rem;
+    /*  background-color: #ffb;*/
+}
+
+.custom-container {
+    /*
+  padding-right: 15px;
+  padding-left: 15px;
+*/
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
+    /*    width: 350px;*/
+    /*    height: 200px;*/
+}
+
+.flexbox > a {
+    flex: 0 1 auto;
+    align-self: stretch;
+    width: 50vw;
+}
+
+.flex-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.flex-tabs > a > div {
+    width: 100%;
+    height: 100%;
+    /*    justify-content: center*/
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    /*      float: left;*/
+    /*  margin-bottom: -1px;*/
+}
+
+.flex-tabs > a {
+    /*  margin-right: 2px;*/
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.flex-tabs > a:hover {
+    border-color: #eee #eee #ddd;
+}
+
+.flex-tabs > a > div.active,
+.flex-tabs > a:hover > div.active,
+.flex-tabs > a:focus > div.active {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.landing {
+    text-align: center;
+}
+
+.info 
+    font-style: italic;
+    text-align: center;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 100px 0.75rem 100px;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 8px 8px;
+    font-size: 18px;
+/*    line-height: 1.428571429;*/
+    line-height: 1.5;
+    border-radius: 25px;
+    
+    position: fixed; 
+/*    or absolute?*/
+    bottom: 5vw;
+    right: 5vw;
+}
+
+.btn:focus {
+    outline: none !important;

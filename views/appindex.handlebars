@@ -3,6 +3,14 @@
 <html lang="en">
   
 <head>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script>
+    $(function () {
+        $("#homelink").load("templates/homelink.handlebars")
+    });
+    </script>
+    
 	<meta charset="utf-8">
 	<title>hapiflo</title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +20,8 @@
 	
 </head>
 <body>
+    
+	<div id="homelink"></div>
 	<header>
 	<div class= "curmenu">
 		<h1 id= "hFlow">FLOW</h1>
@@ -33,11 +43,11 @@
 	<table style= "width: 100%">
 
 	<tr>
-		<td><center><a href="/appnoviceflo"><div style="width: 280px; height: 300px; padding-top: 3%; padding-bottom: 2%; color: #46D9E3;"><h1 id = "novicelink">NOVICE</h1> 
+		<td><center><a href="/appnoviceflo"><div style="width: 280px; height: 300px; padding-top: 3%; padding-bottom: 2%; color: gray;"><h1 id = "novicelink">NOVICE</h1> 
 			<h3 style= "color: black">(Click here if you do not practice yoga regularly)</h3></div></a></center></td>
 	</tr>
 	<tr>
-		<td><center><a href="/appyogiflo"><div style="width: 280px; height: 300px; padding-top: 3%; padding-bottom: 2%; color: #46D9E3;"><h1 id = "yogilink">YOGI</h1>
+		<td><center><a href="/appyogiflo"><div style="width: 280px; height: 300px; padding-top: 3%; padding-bottom: 2%; color: gray;"><h1 id = "yogilink">YOGI</h1>
 			<h3 style= "color: black">(Click here if you have a regular yoga practice)</h3></div></a></center></td>
 	</tr>
 	</table>

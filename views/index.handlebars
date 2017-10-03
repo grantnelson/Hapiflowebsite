@@ -1,30 +1,180 @@
 <!doctype html>
 
 <html lang="en">
-  
+<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script>
+    $(function () {
+        $("#navbar").load("templates/navbar.handlebars")
+    });
+function openC(evt, cityName) {
+    var i, tabcontent, tablinks;
+    
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+<div id="navbar"></div>
 <head>
 	<meta charset="utf-8">
 	<title>hapiflo</title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
+    
+	<script src="js/appposes.js"></script>
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/hapifloapp.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-	
-	<table style= "width: 100%">
+	<div id="navbar"></div>
 
-	<tr>
-		<td><center><a href="/appindex"><div style="width: 280px; height: 300px; padding-top: 3%; padding-bottom: 2%; color: #46D9E3;"><h1 id = "yogilink">Enter App Here!</h1>
-			<h3 style= "color: black">(Click here to enter our app testing)</h3></div></a></center></td>
-	</tr>
+    
+    <h1 style="text-align: center; color: black;">ॐ HapiFlo ॐ</h1>
+    <p style="text-align: center; padding-top: 3%; padding-bottom: 2%; color: black;">Let our audio guided flow bring your gaze inward.</p>
+        
+    
+        <div class="tab">
+          <button class="tablinks" onclick="openC(event, 'Home')">Home</button>
+          <button class="tablinks" onclick="openC(event, 'Flo')">Flo</button>
+          <button class="tablinks" onclick="openC(event, 'Wiki')">Wiki</button>
+          <button class="tablinks" onclick="openC(event, 'Blog')">Blog</button>
+          <button class="tablinks" onclick="openC(event, 'About')">About</button>
+        </div>
 
-	</table>
 
+        <div id="Flo" class="tabcontent">
+          <h3>Flo</h3>
+          <p>Flo Info.</p> 
+        </div>
+
+        <div id="Wiki" class="tabcontent">
+          <h3>Wiki</h3>
+            
+            	{{#each appposes}}
+                    <div class = "wordPoses">
+                        <h6><center>{{name}}</center></h6>
+                        <h2 style= "color: gray; size: 14pt;"><center>{{sanskrit}}</center></h2>
+                    </div>
+                    <div class = "mediaPoses">
+                        <center><img width= "200" height= "200" src= "{{imgURL}}"></center>
+                        <center><iframe width="300" height="315" src="{{videoURL}}"></iframe></center>
+                    </div>
+                {{/each}}
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+	<script src="js/appposes.js"></script>
+            
+        </div>
+        <div id="Blog" class="tabcontent">
+          <h3>Blog</h3>
+          <p>Blog info.</p>
+        </div>
+        <div id="About" class="tabcontent">
+          <h3>About</h3>
+          <p>About info.</p>
+        </div>
+    
+    <div class="1"> 
+      <h2>Panel One</h2>
+      <p><center>Blachfaf alachfaf alachfaf alachfaf alachfaf alachfaf alachfaf a</center></p>
+    </div>
 
+    <article class="2"> 
+      <h2>Panel Two</h2>
+      <p><center>lachfaf alachfaf alachfaf alachfaf alachfaf alachfaf a999lachfaf alachfaf alachfaf alachfaf a</center></p>
+    </article>
+
+    <section class="3"> 
+      <h2>Panel Three</h2>
+      <p><center>lachfaf alachfaf alachfaf alachfaf alachfaf alachfaf a</center></p>
+    </section>
+    
+    
+    
+    
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>	
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Company<span style="color:">logo</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Flo</a>
+					·
+					<a href="#">Employee Health</a>
+					·
+					<a href="#">Search</a>
+					·
+					<a href="#">Wiki</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Hapi Inc. &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Pacific Beach</span> San Diego, CA</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>(713) - 419 - 3495</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@company.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About HapiFlo</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
 </body>
 </html>

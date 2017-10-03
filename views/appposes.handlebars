@@ -1,6 +1,14 @@
 <html>
 
 <head>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script>
+    $(function () {
+        $("#homelink").load("templates/homelink.handlebars")
+    });
+    </script>
+
 	<title>hapiflo</title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -17,6 +25,9 @@
   ga('send', 'pageview');
 </script>
 <body>
+        
+	<div id="homelink"></div>
+    
 	<header>
 	<div class= "curmenu">
 		<h1 id="hPoses">POSES</h1>
@@ -36,7 +47,7 @@
 	{{#each appposes}}
 	<div class = "wordPoses">
 		<h6><center>{{name}}</center></h6>
-		<h2 style= "color: #46D9E3;"><center>{{sanskrit}}</center></h2>
+		<h2 style= "color: gray; size: 14pt;"><center>{{sanskrit}}</center></h2>
 	</div>
 	<div class = "mediaPoses">
         <center><img width= "200" height= "200" src= "{{imgURL}}"></center>

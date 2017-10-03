@@ -2,9 +2,14 @@ $(document).ready(function() {
 	initializePage();
 })
 
-function initializePage(){
-	$("#lHelp").click(function(){
-		ga("send", "event", "menuhelp", "click")
-		console.log("clicked");
-	});
+$(document).ready(function() {
+	showPoses();
+})
+
+function showPoses() {
+	$(".wordPoses").click(function() {
+		// console.log('clicked')
+		$(this).next().slideToggle();
+		// $(this).css({backgroundColor: "#ffe"});
+	})
 }

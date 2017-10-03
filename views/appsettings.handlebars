@@ -1,5 +1,13 @@
 <html>
 <head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script>
+    $(function () {
+        $("#homelink").load("templates/homelink.handlebars")
+    });
+    </script>
+
 	<meta charset="utf-8">
 	<title>hapiflo</title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -9,6 +17,9 @@
 	
 </head>
 <body>
+        
+	<div id="homelink"></div>
+    
 	<header>
 	<div class= "curmenu">
 		<h1 id= "hSet">YOGI AUDITOR</h1>
