@@ -10,6 +10,8 @@
     flex-direction: row;
     align-items: center;
     padding: 0.75rem 15px 0.75rem 15px;
+    color: black;
+    background-color: black;
     /*        top right bottom left*/
 /*    position:fixed;*/
 /*    flexboxes cannot have a fixed position*/
@@ -111,9 +113,9 @@
 .flex-tabs > a:focus > div.active {
     color: #555;
     cursor: default;
-    background-color: #fff;
+    background-color: dimgray;
     border: 1px solid #ddd;
-    border-bottom-color: transparent;
+    border-bottom-color: dimgray;
 }
 
 .landing {
