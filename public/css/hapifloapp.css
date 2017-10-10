@@ -1,13 +1,13 @@
 td{position:relative; z-index:0}
 .bottomimg{     position: absolute;
                 top: 65px;
-                right: 15px;}
+                left: 35%;}
 .bottom2{     position: absolute;
                 top: 90px;
-                right: 15px;}
+                left: 35%;}
 .topimg{        position: absolute;
                 top: 10px;
-                right: 75px;}
+                left: 35%;}
 
 img {
   padding: 0;
@@ -242,7 +242,7 @@ body {
 
 
 a {
-    $color: gray;
+    $color: black;
     color: $color;
     text-decoration: none;
     
@@ -286,6 +286,9 @@ div.tab button:hover {
 /* Create an active/current tablink class */
 div.tab button.active {
     background-color:  lightgray;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Style the tab content */
@@ -295,5 +298,35 @@ div.tab button.active {
     border: 1px solid dimgray;
     border-top: none;
 }
-
+.square-box{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: gray;
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 30px;
+    margin: auto;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+.square-content div {
+   display: table;
+   width: 100%;
+   height: 10%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
 
